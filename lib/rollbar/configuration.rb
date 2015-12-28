@@ -45,6 +45,7 @@ module Rollbar
     attr_accessor :use_eventmachine
     attr_accessor :web_base
     attr_accessor :write_to_file
+    attr_accessor :json_adapter
 
     attr_reader :project_gem_paths
 
@@ -97,6 +98,7 @@ module Rollbar
       @verify_ssl_peer = true
       @web_base = DEFAULT_WEB_BASE
       @write_to_file = false
+      @json_adapter = nil
     end
 
     def initialize_copy(orig)
